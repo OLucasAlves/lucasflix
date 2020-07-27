@@ -13,7 +13,16 @@ function Footer() {
         <a href="https://www.alura.com.br/">
           Imersão React da Alura
         </a>
+        
+        
       </p>
+      <a href="https://www.linkedin.com/in/olucas-ribeiro/">
+        Linkedin
+        </a>
+        <a> | </a>
+        <a href="https://twitter.com/OLucas_Alves">
+          Twitter
+        </a>
     </FooterBase>
   );
 }

@@ -22,7 +22,7 @@ const Container = styled.ul`
     }
     .slick-next {
         right: 16px;
-    }
+    }   
 `;
 
 export const SliderItem = styled.li`
@@ -31,9 +31,10 @@ export const SliderItem = styled.li`
         margin: 16px;
         width: 298px;
         height: 197px;
-        object-fit: cover;
-    }
+        object-fit: cover;  
+    } 
 `;
+
 
 const Slider = ({ children }) => (
     <Container>

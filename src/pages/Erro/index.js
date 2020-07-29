@@ -5,9 +5,6 @@ import './styles.css'
 function Erro(){
     return(
       
-        
-        
-
         <div className='container'>
             <Link to="/">
                 <img className="Logo" src={Logo} alt="LucasFlix"></img>

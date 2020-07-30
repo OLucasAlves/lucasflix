@@ -1,17 +1,122 @@
 {
     "categorias": [
-        {
-            "id": 1,
-            "nome": "Front End",
-            "descricao": "Uma categoria",
-            "cor": "#cbd1ff"
+      
+      {
+        "nome": "StandUp",
+        "cor": "#00C86F",
+        "link_extra": {
         },
-
-        {
-            "id": 2,
-            "nome": "Back End",
-            "descricao": "Outra categoria",
-            "cor": "#cbd1ff"
-        }
+        "videos": [
+          {
+            "titulo": "THIAGO VENTURA - TIGAS E OS 300 DE ESPARTA l Legendado",
+            "url": "https://www.youtube.com/watch?v=75fK0iwhxdE"
+          },
+          {
+            "titulo": "Rodrigo Marques - Especial de Comédia - O Problema é Meu - Stand Up Comedy",
+            "url": "https://www.youtube.com/watch?v=xaq5wV24TH0"
+          },
+          {
+            "titulo": "AFONSO PADILHA - VOCÊ FAZ O QUE VOCÊ GOSTA?",
+            "url": "https://www.youtube.com/watch?v=WdjUwA648Uo"
+          },
+          {
+            "titulo": "ESPECIAL DE COMÉDIA - TRAGO VERDADES com Emerson Ceará (Episódio 1)",
+            "url": "https://www.youtube.com/watch?v=ID8_S_ngtuk"
+          }
+        ]
+      },
+  
+      {
+        "nome": "Business Intelligence",
+        "cor": "#6b5be2",
+        "link_extra": {
+          },
+        "videos": [
+          {
+            "titulo": "What is Tableau? | A Tableau Overview",
+            "url": "https://www.youtube.com/watch?v=YfE9jBq002s"
+          },
+          {
+            "titulo": "TC18 Tip Battle Round 2 Tableau Version 9",
+            "url": "https://www.youtube.com/watch?v=kFUmuGlux-0"
+          },
+          {
+            "titulo": "Curso Básico de Power BI - Aula 01",
+            "url": "https://www.youtube.com/watch?v=merUYMASzWw"
+          }
+        ]
+      },
+  
+      {
+        "nome": "Code",
+        "cor": "red",
+        "link_extra": {
+        },
+        "videos": [
+          {
+            "titulo": "Introdução a programação Reativa - Pokedéx Reativo #1",
+            "url": "https://www.youtube.com/watch?v=7DbPSiA4ENg&t=14s"
+          },
+          {
+            "titulo": "Selenium com Python #00 - Abertura do curso",
+            "url": "https://www.youtube.com/watch?v=PHHXksljGNA&t=192s"
+          },
+          {
+            "titulo": "Python na Prática fazendo Web Scraping (de JavaScript dinâmico) // Mão no Código #28",
+            "url": "https://www.youtube.com/watch?v=Vxl5jUltHBo&t=374s"
+          }
+        ]
+      },
+  
+      {
+        "nome": "Data Science e Inteligência Artificial",
+        "cor": "#9cd33b",
+        "link_extra": {
+          "text": "Cursos de Data Science na Alura",
+          "url": "https://www.alura.com.br/formacao-data-science"
+        },
+        "videos": [
+          {
+            "titulo": "Curso Python #01 - Seja um Programador",
+            "url": "https://www.youtube.com/watch?v=S9uPNppGsGo"
+          },
+          {
+            "titulo": "O que é Data Science?",
+            "url": "https://www.youtube.com/watch?v=5b9Z8toVaAU&t=9s"
+          },
+          {
+            "titulo": "Melhor forma de aprender Python",
+            "url": "https://www.youtube.com/watch?v=Gojqw9BQ5qY"
+          },
+          {
+            "titulo": "Como ingressar no mercado de Data Science?",
+            "url": "https://www.youtube.com/watch?v=gxyjGmOV540"
+          }
+        ]
+      },
+      {
+        "nome": "Series",
+        "cor": "orange",
+        "videos": [
+          {
+            "titulo": "Breaking Bad",
+            "url": "https://www.youtube.com/watch?v=VaOt6tXyf2Y"
+          },
+          {
+            "titulo": "Dark",
+            "url": "https://www.youtube.com/watch?v=JkUWmxhtU4E"
+          },
+          {
+            "titulo": "Mr. Robot",
+            "url": "https://www.youtube.com/watch?v=N6HGuJC--rk"
+          },
+          {
+            "titulo": "Better Call Saul",
+            "url": "https://www.youtube.com/watch?v=FAdiEjeNRi0"
+          }
+        ]
+      }
+      
+      
     ]
-}
+  }

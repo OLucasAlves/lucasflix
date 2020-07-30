@@ -36,19 +36,17 @@ function CadastroCategoria() {
   }
 
    useEffect(() => {
-    const URL = window.location.hostname.includes('localhost')
-    ? 'http://localhost:8080/categorias'
-    : 'http://lucasflix-api.herokuapp.com/';
-  fetch(URL)
-    .then(async (response) => {
-      if (response.ok) {
-        const result = await response.json();
-        setCategorias(result);
-        return;
-      }
-      throw new Error('Não foi possível pegar os dados');
-    });
-}, []);
+    const URL = "http://localhost:8080/categorias";
+    fetch(URL)
+      .then(async (response) => {
+        if (response.ok) {
+          const result = await response.json();
+          setCategorias(result);
+          return;
+        }
+        throw new Error('Não foi possível pegar os dados');
+      });
+  }, []);
   return (
     <PageDefault>
       <div >

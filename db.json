@@ -41,7 +41,7 @@
       "id": 6,
       "titulo": "Música",
       "descricao": "Categoria de música",
-      "cor": "red",
+      "cor": "#4285f4",
       "link_extra": {}
     }
   ],

@@ -36,6 +36,13 @@
       "titulo": "Series",
       "descricao": "Categoria de Series",
       "cor": "orange"
+    },
+    {
+      "id": 6,
+      "titulo": "Música",
+      "descricao": "Categoria de música",
+      "cor": "red",
+      "link_extra": {}
     }
   ],
   "videos": [
@@ -146,6 +153,31 @@
       "categoriaId": 5,
       "titulo": "Better Call Saul",
       "url": "https://www.youtube.com/watch?v=FAdiEjeNRi0"
+    },
+    {
+      "id": 19,
+      "categoriaId": 6,
+      "titulo": "Marcelo Falcão - Viver (Clipe Oficial)",
+      "url": "https://www.youtube.com/watch?v=OMOVBjrv2-w"
+    },
+    {
+      "id": 20,
+      "categoriaId": 6,
+      "titulo": "Charlie Brown Jr. - Só os Loucos Sabem (Video Clipe)",
+      "url": "https://www.youtube.com/watch?v=JRJj4z-prvM"
+    },
+    {
+      "id": 21,
+      "categoriaId": 6,
+      "titulo": "Red Hot Chili Peppers - Otherside [Official Music Video]",
+      "url": "https://www.youtube.com/watch?v=rn_YodiJO6k"
+    },
+    {
+      "id": 21,
+      "categoriaId": 6,
+      "titulo": "O Rappa e Rapadura - Reza Vela / Nordeste me Veste [Acústico na Oficina Francisco Brennand]",
+      "url": "https://www.youtube.com/watch?v=JR8Cl7hRn8M"
     }
+
   ]
 }

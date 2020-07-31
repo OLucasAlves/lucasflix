@@ -48,7 +48,7 @@ function CadastroCategoria() {
   }
 
   async function handleDeleteCategoria(id) {
-    try {
+   /*  try {
       await fetch(`${URL}/${id}`, {
         method: 'DELETE',
       });
@@ -56,7 +56,8 @@ function CadastroCategoria() {
       setCategorias(categorias.filter(categoria => categoria.id !== id));
     } catch (err) {
       alert('Erro ao deletar caso, tente novamente')
-    }
+    } */
+    alert('Desabilitado por que estava excluindo tudo rsrsrsrs')
   }
 
   useEffect(() => {

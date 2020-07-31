@@ -13,7 +13,7 @@ function CadastroCategoria() {
       : 'https://lucasflix-api.herokuapp.com/categorias';
 
   const valoresIniciais = {
-    nome: '',
+    titulo: '',
     descricao: '',
     cor: '',
   }
@@ -41,6 +41,24 @@ function CadastroCategoria() {
 
   }
 
+  async function handleNewcategoria(e){
+    e.preventDefault();
+    
+    try{
+       await fetch(URL, {
+           method: 'POST',
+           headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(valores),
+       })     
+    }catch(err){
+        alert('Erro ao cadastrar caso, tente novamente');
+    }
+    setCategorias([...categorias, valores]);
+    setValores(valoresIniciais);
+}
 
   async function handleDeleteCategoria(id) {
     try {
@@ -71,22 +89,15 @@ function CadastroCategoria() {
   return (
     <PageDefault>
       <div >
-        <h1>Cadastro de Categoria: {valores.nome} </h1>
+        <h1>Cadastro de Categoria: {valores.titulo} </h1>
 
-        <form onSubmit={function handleSubmit(e) {
-          e.preventDefault();
-          setCategorias([
-            ...categorias,
-            valores
-          ]);
-          setValores(valoresIniciais)
-        }}>
+        <form onSubmit={handleNewcategoria}>
 
           <FormField
-            label="Nome da Categoria"
-            name="nome"
+            label="titulo da Categoria"
+            name="titulo"
             type="text"
-            value={valores.nome}
+            value={valores.titulo}
             onChange={handleChange}
           />
 
@@ -118,9 +129,9 @@ function CadastroCategoria() {
 
         <ul>
           {categorias.map(categoria => (
-            <li key={categoria.nome}>
-              <strong>Nome</strong>
-              <p>{categoria.nome}</p>
+            <li key={categoria.titulo}>
+              <strong>titulo</strong>
+              <p>{categoria.titulo}</p>
 
               <strong>Descrição</strong>
               <p>{categoria.descricao}</p>

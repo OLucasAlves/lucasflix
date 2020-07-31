@@ -36,12 +36,6 @@
       "titulo": "Series",
       "descricao": "Categoria de Series",
       "cor": "orange"
-    },
-    {
-      "titulo": "Música",
-      "descricao": "Categoria de Músicas",
-      "cor": "#008040",
-      "id": 6
     }
   ],
   "videos": [
@@ -153,6 +147,5 @@
       "titulo": "Better Call Saul",
       "url": "https://www.youtube.com/watch?v=FAdiEjeNRi0"
     }
-    
   ]
 }

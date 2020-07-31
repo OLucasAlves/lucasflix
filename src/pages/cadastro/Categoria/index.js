@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link,useHistory } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault'
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
@@ -22,7 +22,7 @@ function CadastroCategoria() {
   }
   const [categorias, setCategorias] = useState([]);
   const { handleChange,valores, clearForm } = useForm(valoresIniciais);
-
+  const history = useHistory();
   // console.log('nome categoria-----'+nomeDaCategoria);
 
 
@@ -43,6 +43,7 @@ function CadastroCategoria() {
       alert('Erro ao cadastrar caso, tente novamente');
     }
     setCategorias([...categorias, valores]);
+    history.push('/')
     clearForm();
   }
 
@@ -80,7 +81,7 @@ function CadastroCategoria() {
         <form onSubmit={handleNewcategoria}>
 
           <FormField
-            label="titulo da Categoria"
+            label="Titulo da Categoria"
             name="titulo"
             type="text"
             value={valores.titulo}
@@ -116,7 +117,7 @@ function CadastroCategoria() {
         <ul>
           {categorias.map(categoria => (
             <li key={categoria.titulo}>
-              <strong>titulo</strong>
+              <strong>Titulo</strong>
               <p>{categoria.titulo}</p>
 
               <strong>Descrição</strong>

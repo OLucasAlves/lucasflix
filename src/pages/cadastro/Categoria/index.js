@@ -8,6 +8,10 @@ import './styles.css';
 
 function CadastroCategoria() {
 
+  const URL = window.location.hostname.includes('localhost')
+      ? 'http://localhost:8080/categorias'
+      : 'https://lucasflix-api.herokuapp.com/categorias';
+
   const valoresIniciais = {
     nome: '',
     descricao: '',
@@ -37,10 +41,21 @@ function CadastroCategoria() {
 
   }
 
+
+  async function handleDeleteCategoria(id) {
+    try {
+      await fetch(`${URL}/${id}`, {
+        method: 'DELETE',
+      });
+      console.log("------------" + id);
+      setCategorias(categorias.filter(categoria => categoria.id !== id));
+    } catch (err) {
+      alert('Erro ao deletar caso, tente novamente')
+    }
+  }
+
   useEffect(() => {
-    const URL = window.location.hostname.includes('localhost')
-      ? 'http://localhost:8080/categorias'
-      : 'https://lucasflix-api.herokuapp.com/categorias';
+    
     fetch(URL)
       .then(async (response) => {
         if (response.ok) {
@@ -52,19 +67,6 @@ function CadastroCategoria() {
       });
   }, []);
 
-
-
-  async function handleDeleteIncident(id) {
-    try {
-        await fetch(`${URL}/${id}`, {
-          method: 'DELETE',
-        });
-
-        setCategorias(categorias.filter(categoria => categoria.id !== id));
-    } catch (err) {
-        alert('Erro ao deletar caso, tente novamente')
-    }
-}
 
   return (
     <PageDefault>
@@ -109,25 +111,26 @@ function CadastroCategoria() {
       </div>
 
 
-      <div className="profile-container">
+      <div className="container">
 
 
         <h1>Categorias cadastradas</h1>
 
         <ul>
-          {categorias.map(valor => (
-            <li key={valor.nome}>
+          {categorias.map(categoria => (
+            <li key={categoria.nome}>
               <strong>Nome</strong>
-              <p>{valor.nome}</p>
+              <p>{categoria.nome}</p>
 
               <strong>Descrição</strong>
-              <p>{valor.descricao}</p>
+              <p>{categoria.descricao}</p>
 
               <strong>Cor</strong>
-              <p>{valor.cor}</p>
+              <p>{categoria.cor}</p>
 
 
-              <button onClick={() =>  handleDeleteIncident(valor.id)}>
+              <button onClick={() => handleDeleteCategoria(categoria.id)}>
+
                 <FiTrash2 size={20} color="#a8a8b3" />
               </button>
             </li>

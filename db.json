@@ -2,7 +2,9 @@
     "categorias": [
       
       {
+        "id": 1,
         "nome": "StandUp",
+        "descricao": "Categoria de StandUp",
         "cor": "#00C86F",
         "link_extra": {
         },
@@ -27,7 +29,9 @@
       },
   
       {
+        "id": 2,
         "nome": "Business Intelligence",
+        "descricao": "Categoria de Business Intelligence",
         "cor": "#6b5be2",
         "link_extra": {
           },
@@ -48,7 +52,9 @@
       },
   
       {
+        "id": 3,
         "nome": "Code",
+        "descricao": "Categoria de Code",
         "cor": "red",
         "link_extra": {
         },
@@ -69,7 +75,9 @@
       },
   
       {
+        "id": 4,
         "nome": "Data Science e Inteligência Artificial",
+        "descricao": "Categoria de Data Science e Inteligência Artificial",
         "cor": "#9cd33b",
         "link_extra": {
           "text": "Cursos de Data Science na Alura",
@@ -95,7 +103,9 @@
         ]
       },
       {
+        "id": 5,
         "nome": "Series",
+        "descricao": "Categoria de Series",
         "cor": "orange",
         "videos": [
           {

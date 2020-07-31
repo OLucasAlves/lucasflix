@@ -1,8 +1,10 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault'
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
+import { FiTrash2 } from 'react-icons/fi';
+import './styles.css';
 
 function CadastroCategoria() {
 
@@ -35,8 +37,8 @@ function CadastroCategoria() {
 
   }
 
-   useEffect(() => {
-     const URL = window.location.hostname.includes('localhost')
+  useEffect(() => {
+    const URL = window.location.hostname.includes('localhost')
       ? 'http://localhost:8080/categorias'
       : 'https://lucasflix-api.herokuapp.com/categorias';
     fetch(URL)
@@ -49,6 +51,21 @@ function CadastroCategoria() {
         throw new Error('Não foi possível pegar os dados');
       });
   }, []);
+
+
+
+  async function handleDeleteIncident(id) {
+    try {
+        await fetch(`${URL}/${id}`, {
+          method: 'DELETE',
+        });
+
+        setCategorias(categorias.filter(categoria => categoria.id !== id));
+    } catch (err) {
+        alert('Erro ao deletar caso, tente novamente')
+    }
+}
+
   return (
     <PageDefault>
       <div >
@@ -65,7 +82,7 @@ function CadastroCategoria() {
 
           <FormField
             label="Nome da Categoria"
-            name="nome" 
+            name="nome"
             type="text"
             value={valores.nome}
             onChange={handleChange}
@@ -87,21 +104,38 @@ function CadastroCategoria() {
             onChange={handleChange}
           />
 
-         <Button>Cadastrar</Button>
+          <Button>Cadastrar</Button>
         </form>
       </div>
-      
-        
 
-      <ul>
-        {categorias.map((categoria, indice) => {
-          return (
-            <li key={`${categoria}${indice}`}>
-              {categoria.nome}
+
+      <div className="profile-container">
+
+
+        <h1>Categorias cadastradas</h1>
+
+        <ul>
+          {categorias.map(valor => (
+            <li key={valor.nome}>
+              <strong>Nome</strong>
+              <p>{valor.nome}</p>
+
+              <strong>Descrição</strong>
+              <p>{valor.descricao}</p>
+
+              <strong>Cor</strong>
+              <p>{valor.cor}</p>
+
+
+              <button onClick={() =>  handleDeleteIncident(valor.id)}>
+                <FiTrash2 size={20} color="#a8a8b3" />
+              </button>
             </li>
-          )
-        })}
-      </ul>
+          ))}
+
+        </ul>
+      </div>
+
 
       <Link to="/">
         Ir para Home

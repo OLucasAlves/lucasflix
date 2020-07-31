@@ -4,61 +4,47 @@ import PageDefault from '../../../components/PageDefault'
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
 import { FiTrash2 } from 'react-icons/fi';
+import useForm from '../../../hooks/useForm'
 import './styles.css';
+
+
 
 function CadastroCategoria() {
 
   const URL = window.location.hostname.includes('localhost')
-      ? 'http://localhost:8080/categorias'
-      : 'https://lucasflix-api.herokuapp.com/categorias';
+    ? 'http://localhost:8080/categorias'
+    : 'https://lucasflix-api.herokuapp.com/categorias';
 
   const valoresIniciais = {
     titulo: '',
     descricao: '',
     cor: '',
   }
-
   const [categorias, setCategorias] = useState([]);
-  const [valores, setValores] = useState(valoresIniciais);
+  const { handleChange,valores, clearForm } = useForm(valoresIniciais);
 
   // console.log('nome categoria-----'+nomeDaCategoria);
 
-  function setValor(chave, valor) {
-    setValores({
-      ...valores,
-      [chave]: valor,
-    })
-  }
 
-  function handleChange(e) {
-    //const { getAttribute,value } = e.target;
 
-    //console.log('nome categoria-----'+nomeDaCategoria);
-    //console.log('nome evento-----'+e.target.value);
-    setValor(
-      e.target.getAttribute('name'),
-      e.target.value);
-
-  }
-
-  async function handleNewcategoria(e){
+  async function handleNewcategoria(e) {
     e.preventDefault();
-    
-    try{
-       await fetch(URL, {
-           method: 'POST',
-           headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json',
+
+    try {
+      await fetch(URL, {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(valores),
-       })     
-    }catch(err){
-        alert('Erro ao cadastrar caso, tente novamente');
+      })
+    } catch (err) {
+      alert('Erro ao cadastrar caso, tente novamente');
     }
     setCategorias([...categorias, valores]);
-    setValores(valoresIniciais);
-}
+    clearForm();
+  }
 
   async function handleDeleteCategoria(id) {
     try {
@@ -73,7 +59,7 @@ function CadastroCategoria() {
   }
 
   useEffect(() => {
-    
+
     fetch(URL)
       .then(async (response) => {
         if (response.ok) {

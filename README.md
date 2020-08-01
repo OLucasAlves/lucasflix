@@ -3,6 +3,8 @@
 ## 💻 LucasFlix
 Projeto criado durante a Imersão React da [Alura](https://www.alura.com.br/).
 
+Link demo do projeto [LucasFlix](https://lucasflix.vercel.app/).
+
 <h1 align="center">
     <img style="width:70%" alt="lucasflix" src="https://fontmeme.com/permalink/200727/36f0cec215ce912f8b87976f3cdf7ba6.png" />
     <br>

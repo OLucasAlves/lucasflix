@@ -1,6 +1,6 @@
  const URL = window.location.hostname.includes('localhost')
 ? 'http://localhost:8080'
-: 'https://lucasflix-api.herokuapp.com';
+: 'https://lucasflix.onrender.com';
 
 export default {
     URL,

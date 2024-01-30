@@ -13,21 +13,18 @@
     "react-dom": "^16.13.1",
     "react-icons": "^3.10.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
+    "react-scripts": "^5.0.1",
     "react-slick": "^0.27.1",
     "styled-components": "^5.1.1"
   },
   "scripts": {
-    "start": "node ./server.js",
+    "start": "react-scripts start",
     "dev": "concurrently \"react-scripts start\" \"node ./server.js\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server:static": "json-server --watch ./src/data/db.json --port 8080",
     "server": "node ./server.js"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": {
     "production": [
